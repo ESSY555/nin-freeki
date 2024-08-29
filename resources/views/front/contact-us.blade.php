@@ -11,7 +11,7 @@
 
     <!-- Contact Information Section -->
     <section class="py-12">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8"> 
             <div class="bg-white p-8 shadow-lg rounded-lg">
                 <h2 class="text-2xl font-bold mb-4">Let us know your enquiry</h2>
                 <p class="mb-6">By filling and submitting the form below, we will get back to you as soon as possible.</p>
@@ -59,7 +59,7 @@
     <section class="py-12 bg-blue-700 text-white">
         <div class="container mx-auto px-4">
             <h2 class="text-2xl font-bold mb-4 text-center">Find Us Here</h2>
-            <div class="aspect-w-16 aspect-h-20">
+            <div class="">
                 <iframe class="w-full h-full rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19804.643185435173!2d0.05522398749371572!3d51.48268296812912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8ae4b84cbb6b7%3A0xbccb11bc9b36d0c4!2sPlumstead%20High%20St%2C%20London%20SE18%2C%20UK!5e0!3m2!1sen!2suk!4v1616393966423!5m2!1sen!2suk" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
         </div>

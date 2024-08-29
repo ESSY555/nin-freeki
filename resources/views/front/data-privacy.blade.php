@@ -3,23 +3,26 @@
 
 <div class="bg-gray-100 text-gray-800">
     <!-- Header -->
-    <header class="bg-green-700 text-white py-6">
-        <div class="container mx-auto px-4">
-            <h1 class="text-3xl font-bold text-center">Data Privacy</h1>
-        </div>
-    </header>
+   
+  <section class="py-12 bg-cover bg-center relative p-3" style="background-image: url('{{ asset('images/data-privacy.jpg') }}');">
+  
+    
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  
+    <div class="container mx-auto px-4 relative z-10 text-white pt-8">
+      <h2 class="text-4xl font-bold mb-4 text-center text-white pt-8">Data Privacy</h2>
+        <h2 class="text-4xl font-bold mb-4">Introduction</h2>
+        <p class="text-lg mb-6">
+            The NDPR provides legal safeguards for the processing of personal data. Under the NDPR, Personal Data must be processed in accordance with a specific, legitimate, and lawful purpose consented to by the Data Subject.
+        </p>
+    </div>
+</section>
 
-    <!-- Introduction Section -->
-    <section class="py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold mb-4">Introduction</h2>
-            <p class="text-gray-700 mb-6">
-                The NDPR provides legal safeguards for the processing of personal data. Under the NDPR, Personal Data must be processed in accordance with a specific, legitimate, and lawful purpose consented to by the Data Subject.
-            </p>
-        </div>
-    </section>
+
 
     <!-- Definitions Section -->
+  <div>
+  
     <section class="py-12 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-2xl font-bold mb-4">Key Definitions</h2>
@@ -101,6 +104,7 @@
             </ul>
         </div>
     </section>
+  </div>
 <div>
 
 @endsection

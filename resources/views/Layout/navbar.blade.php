@@ -91,22 +91,31 @@
             </div>
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                 <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                    <li>
-                        <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+                     <li>
+                        <a href="{{ route('home.page') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
                     </li>
-                    <li>
-                        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-                    </li>
-                    <li>
-                        <select class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                            <option value="" disabled selected class="text-gray-900 dark:text-white">Services</option>
-                            <option value="#service1" class="text-gray-900 dark:text-white">- Enrol for your NIN</option>
-                            <option value="#service2" class="text-gray-900 dark:text-white">- Solar panel inverter</option>
-                        </select>
-                    </li>
+                       <li class="">
+                       <!-- Dropdown menu -->
+                    
+<div class="relative inline-block w-full">
+    <select id="serviceSelect" class="block w-full py-2 pl-3 pr-6 text-gray-900 rounded appearance-none hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+        <option value="" disabled selected class="text-gray-900 dark:text-white">Services</option>
+        <option value="{{ route('nin.page') }}" class="text-gray-900 dark:text-white">- Enrol for your NIN</option>
+        <option value="#service2" class="text-gray-900 dark:text-white">- Solar panel inverter</option>
+    </select>
+    <i class="fas fa-chevron-down absolute right-16 top-1/2 transform -translate-y-1/2 pointer-events-none text-gray-500"></i>
+</div>
 
+
+                    </li>
+                     <li class="-ml-5" style="margin-left: -20px; z-index: 100">
+                        <a href="{{ route('data.privacy') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Data Privacy</a>
+                    </li>
                     <li>
-                        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                        <a href="{{ route('Training.section') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Training</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('contact.us') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -173,6 +182,16 @@
                 // Change background every 5 minutes (300000 milliseconds)
                 setInterval(changeBackground, 300000);
             });
+
+            //JavaScript to handle redirection
+
+document.getElementById('serviceSelect').addEventListener('change', function() {
+    var selectedValue = this.value;
+    if (selectedValue) {
+        window.location.href = selectedValue;
+    }
+});
+
         </script>
         <!-- Font Awesome JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>

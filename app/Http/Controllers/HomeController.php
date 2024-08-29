@@ -22,5 +22,11 @@ public function bookingSection(){
 public function contactUs(){
     return view('front.contact-us');
 }
+public function dataPrivacy(){
+    return view('front.data-privacy');
+}
+public function solarPanel(){
+    return view('front.solar');
+}
 
 }

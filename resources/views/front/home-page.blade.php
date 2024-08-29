@@ -30,7 +30,7 @@
 </div>
 </div>
 
-
+{{-- <p>this is the main page</p> --}}
     <div class="py-6 w-11/12 m-auto -mt-5">
         <div class="w-full p-[1px] bg-gray-300 mb-2"></div>
         <div class="flex flex-wrap justify-center lg:justify-between gap-6">
@@ -78,15 +78,38 @@
         </div>
     </div>
 
-    <div class="w-11/12 m-auto overflow-hidden bg-cover bg-center mt-5 h-[10rem]" style="background-image: url('{{ asset('images/lady-holding-nin.JPG') }}');">
-        <marquee behavior="scroll" direction="left" scrollamount="10">
-            <img src="{{ asset('images/lady-holding-nin.JPG') }}" alt="Image 1" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem]">
-            <img src="{{ asset('images/solar1.jpg') }}" alt="Image 2" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem]">
-            <img src="{{ asset('images/nin1.JPG') }}" alt="Image 3" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem]">
-            <img src="{{ asset('images/first-image.JPG') }}" alt="Image 4" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem]">
-            <img src="{{ asset('images/solar1.jpg') }}" alt="Image 5" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem]">
-        </marquee>
-    </div>
+  <div class="w-11/12 m-auto overflow-hidden bg-cover bg-center mt-5 h-[10rem]" style="background-image: url('{{ asset('images/lady-holding-nin.JPG') }}');">
+    <marquee id="imageMarquee" behavior="scroll" direction="left" scrollamount="10">
+        <img src="{{ asset('images/lady-holding-nin.JPG') }}" alt="Image 1" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem] marquee-image">
+        <img src="{{ asset('images/solar1.jpg') }}" alt="Image 2" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem] marquee-image">
+        <img src="{{ asset('images/nin1.JPG') }}" alt="Image 3" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem] marquee-image">
+        <img src="{{ asset('images/first-image.JPG') }}" alt="Image 4" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem] marquee-image">
+        <img src="{{ asset('images/solar1.jpg') }}" alt="Image 5" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem] marquee-image">
+    </marquee>
+</div>
+<script>
+    // Select the marquee element
+    const marquee = document.getElementById('imageMarquee');
+
+    // Select all images with the class marquee-image
+    const images = document.querySelectorAll('.marquee-image');
+
+    // Function to stop the marquee
+    function stopMarquee() {
+        marquee.stop();
+    }
+
+    // Function to start the marquee
+    function startMarquee() {
+        marquee.start();
+    }
+
+    // Add event listeners to each image
+    images.forEach(image => {
+        image.addEventListener('mouseover', stopMarquee);
+        image.addEventListener('mouseout', startMarquee);
+    });
+</script>
 
 
     <div class="flex flex-wrap justify-between w-11/12 m-auto gap-4 mt-5">
