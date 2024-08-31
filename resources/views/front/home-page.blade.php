@@ -2,12 +2,38 @@
 @section('content')
 
 <div class=" mt-[100px]">
-    <div class="bg-gray-100 flex items-center justify-center h-[24rem] -mt-8">
+
+
+    <div class="relative md:h-[24rem] mb-8 bg-cover bg-center flex items-center justify-center" style="background-image: url('{{ asset('images/solar1.jpg') }}');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Container with flex layout -->
+        <div class="relative flex w-3/4 mx-auto space-x-4">
+            <!-- First div: Solar Panel and Inverter -->
+            <div class="w-1/2 bg-white bg-opacity-50 p-8 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-4">Solar Panel, Inverter & Battery Systems</h2>
+                <p class="text-black font-bold">Discover the efficiency and reliability of our solar panel, inverter, and battery systems. Our solutions ensure uninterrupted power supply, reduce your energy costs, and contribute to a sustainable future.</p>
+                <a href="{{ route('solar.panel') }}" class="inline-block mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700">Learn More</a>
+            </div>
+
+            <!-- Second div: NIN Registration -->
+            <div class="w-1/2 bg-white bg-opacity-50 p-8 rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold mb-4">NIN Registration</h2>
+                <p class="text-black font-bold">Get your National Identification Number (NIN) registered today. Our quick and easy process ensures that you are recognized and can access government services without hassle.</p>
+                <a href="{{ route('booking.section') }}" class="inline-block mt-4 px-6 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700">Register Now</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    {{-- <div class="bg-gray-100 flex items-center justify-center h-[24rem] -mt-8">
         <div class="w-full h-full relative">
             <img id="slider1" src="{{ asset('images/solar1.jpg') }}" alt="Image 1" class="slider w-full h-full object-cover rounded-lg shadow-lg opacity-100 scale-100 transition-opacity transition-transform duration-1000 ease-in-out transform">
             <img id="slider2" src="{{ asset('images/nin1.JPG') }}" alt="Image 2" class="slider w-full h-full object-cover rounded-lg shadow-lg opacity-0 scale-90 transition-opacity transition-transform duration-1000 ease-in-out transform absolute top-0 left-0">
         </div>
-    </div>
+    </div> --}}
 <div class="bg-[rgb(227,248,254)] py-5">
 <div class="w-11/12 m-auto">
     <div class="flex flex-wrap justify-between gap-5 md:gap-0">
