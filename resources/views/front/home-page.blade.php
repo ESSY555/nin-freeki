@@ -10,14 +10,14 @@
         <!-- Container with flex layout -->
         <div class="relative flex w-3/4 mx-auto space-x-4">
             <!-- First div: Solar Panel and Inverter -->
-            <div class="w-1/2 bg-white bg-opacity-50 p-8 rounded-lg shadow-lg">
+            <div class="w-1/2 bg-white p-8 rounded-lg shadow-lg">
                 <h2 class="text-xl font-bold mb-4">Solar Panel, Inverter & Battery Systems</h2>
                 <p class="text-black font-bold">Discover the efficiency and reliability of our solar panel, inverter, and battery systems. Our solutions ensure uninterrupted power supply, reduce your energy costs, and contribute to a sustainable future.</p>
                 <a href="{{ route('solar.panel') }}" class="inline-block mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700">Learn More</a>
             </div>
 
             <!-- Second div: NIN Registration -->
-            <div class="w-1/2 bg-white bg-opacity-50 p-8 rounded-lg shadow-lg">
+            <div class="w-1/2 bg-white p-8 rounded-lg shadow-lg">
                 <h2 class="text-xl font-bold mb-4">NIN Registration</h2>
                 <p class="text-black font-bold">Get your National Identification Number (NIN) registered today. Our quick and easy process ensures that you are recognized and can access government services without hassle.</p>
                 <a href="{{ route('booking.section') }}" class="inline-block mt-4 px-6 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700">Register Now</a>
@@ -103,15 +103,15 @@
         </div>
     </div>
 
-  <div class="w-11/12 m-auto overflow-hidden bg-cover bg-center mt-5 h-[10rem]" style="background-image: url('{{ asset('images/lady-holding-nin.JPG') }}');">
-    <marquee id="imageMarquee" behavior="scroll" direction="left" scrollamount="10">
-        <img src="{{ asset('images/lady-holding-nin.JPG') }}" alt="Image 1" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem] marquee-image">
-        <img src="{{ asset('images/solar1.jpg') }}" alt="Image 2" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem] marquee-image">
-        <img src="{{ asset('images/nin1.JPG') }}" alt="Image 3" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem] marquee-image">
-        <img src="{{ asset('images/first-image.JPG') }}" alt="Image 4" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem] marquee-image">
-        <img src="{{ asset('images/solar1.jpg') }}" alt="Image 5" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem] marquee-image">
-    </marquee>
-</div>
+    {{-- <div class="w-11/12 m-auto overflow-hidden bg-cover bg-center mt-5 h-[10rem]" style="background-image: url('{{ asset('images/lady-holding-nin.JPG') }}');">
+        <marquee id="imageMarquee" behavior="scroll" direction="left" scrollamount="10">
+            <img src="{{ asset('images/lady-holding-nin.JPG') }}" alt="Image 1" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem] marquee-image">
+            <img src="{{ asset('images/solar1.jpg') }}" alt="Image 2" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem] marquee-image">
+            <img src="{{ asset('images/nin1.JPG') }}" alt="Image 3" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem] marquee-image">
+            <img src="{{ asset('images/first-image.JPG') }}" alt="Image 4" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem] marquee-image">
+            <img src="{{ asset('images/solar1.jpg') }}" alt="Image 5" class="inline-block rounded-lg shadow-lg mx-2 h-[10rem] w-[18rem] marquee-image">
+        </marquee>
+    </div> --}}
 
 
 
@@ -151,28 +151,35 @@
         carousel.style.animation = null;
     });
 
-  // Select the marquee element
-  const marquee = document.getElementById('imageMarquee');
+    // Select the marquee element
+    const marquee = document.getElementById('imageMarquee');
+    const images = document.querySelectorAll('.marquee-image');
 
-// Select all images with the class marquee-image
-const images = document.querySelectorAll('.marquee-image');
+    // Function to make the marquee full screen
+    function makeFullScreen() {
+        marquee.style.width = '100vw';
+        marquee.style.height = '100vh';
+    }
 
-// Function to stop the marquee
-function stopMarquee() {
-    marquee.stop();
-}
+    // Stop marquee on hover
+    function stopMarquee() {
+        marquee.stop();
+    }
 
-// Function to start the marquee
-function startMarquee() {
-    marquee.start();
-}
+    // Start marquee and reset to full screen
+    function startMarquee() {
+        makeFullScreen();  // Ensure full-screen size whenever it starts
+        marquee.start();
+    }
 
-// Add event listeners to each image
-images.forEach(image => {
-    image.addEventListener('mouseover', stopMarquee);
-    image.addEventListener('mouseout', startMarquee);
-});
-</script>
+    // Apply full screen on page load
+    window.addEventListener('load', makeFullScreen);
+
+    // Add event listeners for hover effect
+    images.forEach(image => {
+        image.addEventListener('mouseover', stopMarquee);
+        image.addEventListener('mouseout', startMarquee);
+    });</script>
 
 
 

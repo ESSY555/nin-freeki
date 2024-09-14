@@ -73,14 +73,14 @@
     <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="{{ route('home.page') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <svg class="w-12 h-12 text-[rgb(254,73,44)]"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <a href="{{ route('home.page') }}" class="flex items-center space-x-3 rtl:space-x-reverse"></a>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 110 20 10 10 0 010-20zm0 12.528V15h1v-1.472l.865-.499-1.73-1-.865.5L12 11.528zM12 9v1.472l-.865.499 1.73 1 .865-.5V15h1v-1.472l.865-.499-1.73-1-.865.5V9h-1zm-4.5 1.5h1v1h-1v-1zm8 0h1v1h-1v-1zm1.5 2.5h1v1h-1v-1zm-11-2h1v1h-1v-1zm13 0h1v1h-1v-1zm1.5 2.5h1v1h-1v-1zM5 8.5h1v1H5v-1zm13 0h1v1h-1v-1zm1.5 2.5h1v1h-1v-1zM5 8.5h1v1H5v-1zm13 0h1v1h-1v-1z" />
+                <svg class="w-12 h-12 text-[rgb(254,73,44)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a10 10 0 110 20 10 10 0 010-20zm0 12.528V15h1v-1.472l.865-.499-1.73-1-.865.5L12 11.528zM12 9v1.472l-.865.499 1.73 1 .865-.5V15h1v-1.472l.865-.499-1.73-1-.865.5V9h-1zm-4.5 1.5h1v1h-1v-1zm8 0h1v1h-1v-1zm1.5 2.5h1v1h-1v-1zm-11-2h1v1h-1v-1zm13 0h1v1h-1v-1zm1.5 2.5h1v1h-1v-1zM5 8.5h1v1H5v-1zm13 0h1v1h-1v-1z" />
                 </svg>
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">UK NIN</span>
             </a>
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse -mt-2">
-                <a href="{{ route('nin.page') }}"> <button type="button" class="text-white mt-5 bg-[rgb(254,73,44)] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
+                <a href="{{ route('nin.page') }}">
+                    <button type="button" class="text-white mt-5 bg-[rgb(254,73,44)] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Get started</button>
                 </a>
                 <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
@@ -91,24 +91,26 @@
             </div>
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                 <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                     <li>
+                    <li>
                         <a href="{{ route('home.page') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
                     </li>
-                       <li class="">
-                       <!-- Dropdown menu -->
-                    
-<div class="relative inline-block w-full">
-    <select id="serviceSelect" class="block w-full py-2 pl-3 pr-6 text-gray-900 rounded appearance-none hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-        <option value="" disabled selected class="text-gray-900 dark:text-white">Services</option>
-        <option value="{{ route('nin.page') }}" class="text-gray-900 dark:text-white">- Enrol for your NIN</option>
-        <option value="{{ route('solar.panel') }}" class="text-gray-900 dark:text-white">- Solar panel inverter</option>
-    </select>
-    <i class="fas fa-chevron-down absolute right-16 top-1/2 transform -translate-y-1/2 pointer-events-none text-gray-500"></i>
-</div>
-
-
+                    <li class="relative group">
+                        <button class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                            Services
+                            <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <ul class="absolute hidden group-hover:block bg-white text-gray-700 py-2 w-40 shadow-lg rounded-lg dark:bg-gray-800 dark:text-white">
+                            <li>
+                                <a href="{{ route('nin.page') }}" class="block px-2 pt-2 hover:bg-gray-100 dark:hover:bg-gray-600 text-nowrap text-[15px]">- Enrol for your NIN</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('solar.panel') }}" class="block px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 text-nowrap text-[15px]">- Solar panel inverter</a>
+                            </li>
+                        </ul>
                     </li>
-                     <li class="-ml-5" style="margin-left: -20px; z-index: 100">
+                    <li class="" style=" z-index: 100">
                         <a href="{{ route('data.privacy') }}" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Data Privacy</a>
                     </li>
                     <li>
@@ -124,6 +126,15 @@
 
 
 
+{{--
+    <div class="relative inline-block w-full">
+        <select id="serviceSelect" class="block w-1/2 py-2 pl-3 pr-6 text-gray-900 rounded appearance-none hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+            <option value="" disabled selected class="text-gray-900 dark:text-white">Services</option>
+            <option value="{{ route('nin.page') }}" class="text-gray-900 dark:text-white">- Enrol for your NIN</option>
+            <option value="{{ route('solar.panel') }}" class="text-gray-900 dark:text-white">- Solar panel inverter</option>
+        </select>
+        <i class="fas fa-chevron-down absolute right-16 top-1/2 transform -translate-y-1/2 pointer-events-none text-gray-500"></i>
+    </div> --}}
 
     <div class="content-wrapper">
 
