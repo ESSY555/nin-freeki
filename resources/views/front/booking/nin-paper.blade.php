@@ -1,22 +1,7 @@
 
 <div class="bg-gray-100 flex items-center justify-center">
     <div class="w-full max-w-lg">
-        <!-- Tabs -->
-     {{-- <div>
-        <p class="font-bold">Select Type:</p>
-        <div class="flex flex-col md:flex-row justify-between gap-3 py-3">
-            <div class="font-bold py-8 px-3 border rounded">
-                I want
-    NIN Card
-    £15 + £40
-            </div>
-            <div class="font-bold py-8 px-3 border rounded">
-                I want
-    the paper
-    (Free) + £40
-            </div>
-           </div>
-     </div> --}}
+
      <div class="py-3"> <p class="font-bold">Select Type:</p></div>
         <div class="flex border-b border-gray-300">
             <button id="tab1" class="tab px-4 py-2 w-1/2 text-center bg-gray-200 text-black border-b-2 border-transparent focus:outline-none" onclick="showContent(1)">I want

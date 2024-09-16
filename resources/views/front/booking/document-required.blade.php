@@ -31,9 +31,9 @@
        </ul>
        <div>
            <p class="pt-3 text-[rgb(254,73,44)]">Just one out of the above documents are required and you must bring the physical original along when coming to capture</p>
-           <a href="{{ route('booking.section') }}">  <button type="button" class="text-white mt-5 bg-[rgb(254,73,44)] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Book Now</button>
+           <a href="{{ route('nin.page') }}">  <button type="button" class="text-white mt-5 bg-[rgb(254,73,44)] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Book Now</button>
            </a>
-          
+
        </div>
        </div>
     </div>

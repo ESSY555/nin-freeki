@@ -102,7 +102,8 @@
                     <li>To regulate your information across all agencies at home and abroad</li>
             </ul>
             <div>
-                <button type="button" class="text-white mt-5 bg-[rgb(254,73,44)] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Book Now</button>
+               <a href="{{ route('nin.page') }}" class="text-white mt-5 bg-[rgb(254,73,44)] hover:bg-blue-800 focus:ring-4 focus:outline-none
+               focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Book Now</a>
                 <p class="pt-5">For More Information, Visit the <a href="" class="text-orange-400">FAQS Section</a></p>
             </div>
            </div>

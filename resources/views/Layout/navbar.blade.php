@@ -196,13 +196,6 @@
 
             //JavaScript to handle redirection
 
-document.getElementById('serviceSelect').addEventListener('change', function() {
-    var selectedValue = this.value;
-    if (selectedValue) {
-        window.location.href = selectedValue;
-    }
-});
-
         </script>
         <!-- Font Awesome JS -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
